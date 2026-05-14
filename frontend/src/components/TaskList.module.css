@@ -1,0 +1,93 @@
+.list {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.completed {
+  opacity: 0.8;
+  background: #ecfdf5;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.topRow strong {
+  display: block;
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.topRow p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.status {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.details {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1;
+  min-width: 140px;
+  border: none;
+  border-radius: 14px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font: inherit;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+.actions button:hover {
+  background: #e2e8f0;
+}
+
+.deleteButton {
+  background: #fee2e2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+@media (max-width: 700px) {
+  .topRow {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
