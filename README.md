@@ -1,6 +1,6 @@
 # Gerenciador de Tarefas
 
-Aplicação de gerenciamento de tarefas para teste de estágio.
+Aplicação de gerenciamento de tarefas.
 
 ## Estrutura do projeto
 
