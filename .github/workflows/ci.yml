@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '22'
       - name: Install backend dependencies
         run: |
           cd backend
@@ -28,13 +28,12 @@ jobs:
   frontend-build:
     name: Frontend build
     runs-on: ubuntu-latest
-    needs: backend-tests
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '22'
       - name: Install frontend dependencies
         run: |
           cd frontend
