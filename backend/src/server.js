@@ -13,6 +13,10 @@ app.use('/api/tasks', taskRoutes);
 
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`Backend rodando em http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Backend rodando em http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
