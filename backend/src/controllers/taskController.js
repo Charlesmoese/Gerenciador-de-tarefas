@@ -4,7 +4,7 @@ function getAllTasks(req, res) {
   res.json(tasks);
 }
 
-function getTaskById(req, res, next) {
+function getTaskById(req, res) {
   const taskId = Number(req.params.id);
   const task = findTask(taskId);
 

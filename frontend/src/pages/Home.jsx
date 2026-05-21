@@ -16,22 +16,22 @@ export default function Home() {
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
 
-  useEffect(() => {
-    loadTasks()
-  }, [])
-
-  async function loadTasks() {
+  const loadTasks = async () => {
     setLoading(true)
     setError('')
     try {
       const data = await getTasks()
       setTasks(data)
-    } catch (err) {
+    } catch {
       setError('Não foi possível carregar as tarefas. Verifique se o backend está rodando.')
     } finally {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    loadTasks()
+  }, [])
 
   async function handleSave(task) {
     setError('')

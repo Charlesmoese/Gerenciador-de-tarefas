@@ -7,10 +7,10 @@ export default function TaskForm({ task, onSave, onCancel }) {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    setTitle(task.title || '')
-    setDescription(task.description || '')
+    setTitle(task?.title || '')
+    setDescription(task?.description || '')
     setError('')
-  }, [task])
+  }, [task?.id])
 
   function handleSubmit(event) {
     event.preventDefault()
